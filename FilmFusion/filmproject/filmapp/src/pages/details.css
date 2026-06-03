@@ -1,0 +1,45 @@
+.details {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-content {
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-poster {
+    max-width: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.details-info {
+    color: #fff;
+}
+
+.watch-trailer-btn,
+.watch-now-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.watch-trailer-btn {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.watch-now-btn {
+    background-color: #00ff00;
+    color: #000;
+}
