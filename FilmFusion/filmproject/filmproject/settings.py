@@ -90,8 +90,8 @@ WSGI_APPLICATION = 'filmproject.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(
-        'postgresql://database_url_9f0k_user:xW70W8w8isdvdKMAKXu3S1t1wmY9U66W@dpg-d8g1gi58nd3s73950p30-a.oregon-postgres.render.com/database_url_9f0k'
+    'default': dj_database_url.config(
+        default=os.environ.get("postgresql://database_url_9f0k_user:xW70W8w8isdvdKMAKXu3S1t1wmY9U66W@dpg-d8g1gi58nd3s73950p30-a.oregon-postgres.render.com/database_url_9f0k")
     )
 }
 
