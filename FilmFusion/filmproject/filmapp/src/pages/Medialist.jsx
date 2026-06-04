@@ -8,7 +8,9 @@ export const Medialist = () => {
     const { mediaType } = useParams();
     const mtype = mediaType === 'movies' ? 'movie' : 'tvshow';
     useEffect(() => {
-        axios.get('http://localhost:8000/api/all/').then(response => {
+       axios.get(
+  "https://filmfusion-p4wa.onrender.com/api/all/"
+).then(response => {
             const allItems = response.data;
             const filteredItems = allItems.filter(item => item.type === mtype)
             setMedia(filteredItems)

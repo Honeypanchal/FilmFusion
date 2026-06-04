@@ -9,7 +9,9 @@ export const Details = () => {
     const [item, setItem] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/all/')
+        axios.get(
+  "https://filmfusion-p4wa.onrender.com/api/all/"
+)
             .then(response => {
                 const allItems = response.data;
                 console.log('ok')

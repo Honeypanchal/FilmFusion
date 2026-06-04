@@ -10,7 +10,9 @@ export const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/all/')
+    axios.get(
+  "https://filmfusion-p4wa.onrender.com/api/all/"
+)
       .then(response => {
         const allItems = response.data;
         const movieItems = allItems.filter(item => item.type === 'movie').slice(0, 6);

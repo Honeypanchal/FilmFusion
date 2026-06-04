@@ -60,9 +60,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "https://your-vercel-url.vercel.app",
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'filmproject.urls'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'filmproject.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get("DATABASE_URL")
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
     )
 }
 
